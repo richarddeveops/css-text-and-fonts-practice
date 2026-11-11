@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 30, 60, 0.45)), url("./Image/wallpaperflare.com_wallpaper%20%28copy%201%29.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+}
+.fiRstH1 {
+    font-size: 30px;
+    color: #2a4a5e;
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto;
+}
+button{
+    display: block;
+    margin: 20px auto;
+    border-radius: 7px;
+    color: #a8c4c4;
+    border: 2px solid #f9f9f9;
+    background-color: teal;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px;
+    }
+
+    .fiRstH1 {
+        font-size: 1.8rem;
+    }
+}
