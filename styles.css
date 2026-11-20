@@ -1,38 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap");
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
+:root {
+    color-scheme: dark;
+    --gallery: #111113;
+    --alabaster: #f4f4f5;
+    --gold: #d4a359;
+    --muted: #b6b4b1;
+    --body: "Manrope", sans-serif;
+    --display: "Instrument Serif", Georgia, serif;
+}
+
 #body {
     min-height: 100vh;
+    padding: clamp(24px, 6vw, 80px);
+    color: var(--alabaster);
+    font-family: var(--body);
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 30, 60, 0.45)), url("./Image/wallpaperflare.com_wallpaper%20%28copy%201%29.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;   
 }
 .fiRstH1 {
-    font-size: 30px;
-    color: #2a4a5e;
+    max-width: 14ch;
+    margin: 0 auto;
+    font-family: var(--display);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.94;
+    color: var(--alabaster);
     text-align: center;
 }
 p{
-    font-size: 16px;
+    max-width: 56ch;
+    color: var(--muted);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    letter-spacing: 0.06em;
     text-align: center;
-    margin: 20px auto;
+    margin: 24px auto;
 }
 button{
     display: block;
     margin: 20px auto;
     border-radius: 7px;
-    color: #a8c4c4;
-    border: 2px solid #f9f9f9;
-    background-color: teal;
-    padding: 10px;
+    color: var(--gallery);
+    border: 1px solid var(--gold);
+    background-color: var(--gold);
+    padding: 12px 22px;
+    font: 600 0.8rem var(--body);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+button:hover {
+    background-color: #e0b875;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
     body {
         padding: 24px;
+    }
+
+    a {
+        color: var(--gold);
+        text-underline-offset: 0.2em;
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 4px;
     }
 
     .fiRstH1 {
